@@ -18,7 +18,7 @@ namespace ParksDirectory.Controllers
 
     // GET api/parks
     [HttpGet]
-    public async Task<List<Park>> Get(string name, string classification, string location, string majorLandmarks, int yearFounded, int foundedBefore, int foundedAfter)
+    public async Task<List<Park>> Get(string name, string classification, string location, string majorLandmarks, string activities, string facilities, int yearFounded, int foundedBefore, int foundedAfter)
     {
       IQueryable<Park> query = _db.Parks.AsQueryable();
 
@@ -40,6 +40,16 @@ namespace ParksDirectory.Controllers
       if(majorLandmarks != null)
       {
         query = query.Where(entry => entry.MajorLandmarks == majorLandmarks);
+      }
+
+      if(activities != null)
+      {
+        query = query.Where(entry => entry.Activities == activities);
+      }
+
+      if(facilities != null)
+      {
+        query = query.Where(entry => entry.Facilities == facilities);
       }
 
       if(yearFounded != 0)

@@ -12,6 +12,10 @@ namespace ParksDirectory.Models
 
     public string MajorLandmarks { get; set; }
 
+    public string Activities { get; set;}
+
+    public string Facilities { get; set; }
+
     public int YearFounded { get; set; }
   }
 }

@@ -1,9 +1,12 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace ParksDirectory.Models
 {
   public class Park
   {
     public int ParkId { get; set; }
-
+    
+    [Required]
     public string Name { get; set; }
 
     public string Classification { get; set; }

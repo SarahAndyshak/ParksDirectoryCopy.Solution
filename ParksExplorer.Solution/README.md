@@ -48,7 +48,7 @@ First, following the instructions in the README of [this repo](https://github.co
 
 ## Known Bugs
 
-* No known issues.
+* As of 31 March 2023, updates (save, edit, delete actions) lag and the page needs to be refreshed for changes to be applied.
 
 ## License
 Enjoy the site! If you have questions or suggestions for fixing the code, please contact me!

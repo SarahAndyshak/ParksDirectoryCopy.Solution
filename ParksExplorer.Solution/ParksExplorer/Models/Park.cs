@@ -8,6 +8,7 @@ namespace ParksExplorer.Models
   public class Park
   {
     public int ParkId { get; set; }
+    [Required(ErrorMessage = "Please enter a name when creating an entry.")]
     public string Name { get; set; }
     public string Classification { get; set; }
     public string Location { get; set; }

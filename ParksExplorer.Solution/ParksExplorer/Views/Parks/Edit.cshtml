@@ -5,6 +5,8 @@
 @model ParksExplorer.Models.Park
 
 <h4>Edit @Model.Name</h4>
+<hr>
+<br>
 
 @using (Html.BeginForm())
 {
@@ -35,4 +37,6 @@
 }
 
 <br>
+<div id="navlinks">
 <p>@Html.ActionLink("Back to park details", "Details", new {id = @Model.ParkId})</p>
+</div>

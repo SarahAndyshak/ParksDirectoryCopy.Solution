@@ -15,4 +15,11 @@ html {
 
 body {
   margin-bottom: 60px;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(10, 68, 10);
+  background-color: rgb(161, 177, 161);
+}
+
+div#navlinks {
+  text-align: center;
 }

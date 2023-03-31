@@ -5,6 +5,8 @@
 @model ParksExplorer.Models.Park
 
 <h4>Add a new park to the website</h4>
+<hr>
+<br>
 
 <p>@Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger", @style = "font-weight: 600;" })</p>
 
@@ -37,6 +39,8 @@
   }
   
   <br>
+  <div id="navlinks">
   <p>@Html.ActionLink("Back to all parks", "Index")</p>
-  
+  </div>
+
 </div>

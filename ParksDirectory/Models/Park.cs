@@ -6,7 +6,7 @@ namespace ParksDirectory.Models
   {
     public int ParkId { get; set; }
     
-    [Required]
+    // [Required]
     public string Name { get; set; }
 
     public string Classification { get; set; }

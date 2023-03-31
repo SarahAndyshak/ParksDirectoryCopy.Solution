@@ -110,6 +110,18 @@ The following query will return the second page, with 2 parks on it:
 GET http://localhost:5000/api/parks/page/2
 ```
 
+To find a park founded before 1950, use the following query string:
+
+```
+GET http://localhost:5000/api/parks?foundedBefore=1950
+```
+
+Similarly, use the following query string to find a park founded after 1950:
+
+```
+GET http://localhost:5000/api/parks?foundedAfter=1950
+```
+
 You can include multiple query strings by separating them with an `&`:
 
 ```
@@ -161,7 +173,7 @@ This API provides the ability to enable responsive pagination in MVC projects. R
 * As of 31 March 2023, the search feature only works with complete names, locations, etc.
 
 ## License
-Enjoy the site! If you have questions or suggestions for fixing the code, please contact me!
+Enjoy the API! If you have questions or suggestions for fixing the code, please contact me!
 
 [MIT](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
 

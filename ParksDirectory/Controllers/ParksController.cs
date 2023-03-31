@@ -18,7 +18,7 @@ namespace ParksDirectory.Controllers
 
     // GET api/parks
     [HttpGet]
-    public async Task<List<Park>> Get(string name, string classification, string location, string majorLandmarks, int yearFounded)
+    public async Task<List<Park>> Get(string name, string classification, string location, string majorLandmarks, int yearFounded, int foundedBefore, int foundedAfter)
     {
       IQueryable<Park> query = _db.Parks.AsQueryable();
 
@@ -47,7 +47,16 @@ namespace ParksDirectory.Controllers
         query = query.Where(entry => entry.YearFounded == yearFounded);
       }
 
-      // want to add search parameters for finding parks founded before/after certain year
+      // add search parameters for finding parks founded before/after certain year
+      if(foundedAfter > 0)
+      {
+        query = query.Where(entry => entry.YearFounded >= foundedAfter);
+      }
+
+      if(foundedBefore > 0)
+      {
+        query = query.Where(entry => entry.YearFounded <= foundedBefore);
+      }
 
       return await query.ToListAsync();
     }

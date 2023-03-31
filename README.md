@@ -170,7 +170,7 @@ This API provides the ability to enable responsive pagination in MVC projects. R
 
 ## Known Bugs
 
-* As of 31 March 2023, the search feature only works with complete names, locations, etc.
+* As of 31 March 2023, the search feature only works with complete names, locations, etc. This may be better to address in MVC search functions.
 
 ## License
 Enjoy the API! If you have questions or suggestions for fixing the code, please contact me!

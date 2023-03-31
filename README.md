@@ -153,6 +153,9 @@ http://localhost:5000/api/park/1
 
 Notice that the value of `parkId` needs to match the id number in the URL. In this example, they are both 1.
 
+## Note about further exploration for coursework
+This API provides the ability to enable responsive pagination in MVC projects. Responsive pagination works fine when the API is tested with Postman. However, when working on a similar MVC during the week, the dev group I participated in had trouble enabling pagination in the website and ended up hard coding pagination, rather than creating responsive pagination.
+
 ## Known Bugs
 
 * As of 31 March 2023, the search feature only works with complete names, locations, etc.

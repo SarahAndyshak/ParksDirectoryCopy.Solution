@@ -58,7 +58,7 @@ public class ParksController : Controller
   [HttpPost, ActionName("Search")]
   public IActionResult Search(string name)
   {
-    List<Park> parks = Planet.GetParks();
+    List<Park> parks = Park.GetParks();
     List<Park> result = parks.FindAll(planet => planet.Name.ToLower().Equals(name.ToLower()));
     return View(result);
   }

@@ -44,7 +44,7 @@ First, following the instructions in the README of [this repo](https://github.co
 1. Clone this repo.
 2. Open the terminal and navigate to this project's production directory called "ParksExplorer".
 3. Within the production directory "ParksExplorer", run `dotnet watch run` in the command line to start the project in development mode with a watcher.
-4. Open the browser to _https://localhost:7286/_. If you cannot access https://localhost:7286 it is likely because you have not configured a .NET developer security certificate for HTTPS. To learn about this, review this lesson: [Redirecting to HTTPS and Issuing a Security Certificate](https://www.learnhowtoprogram.com/lessons/redirecting-to-https-and-issuing-a-security-certificate).
+4. Open the browser to _https://localhost:7044/_. If you cannot access https://localhost:7044 it is likely because you have not configured a .NET developer security certificate for HTTPS. To learn about this, review this lesson: [Redirecting to HTTPS and Issuing a Security Certificate](https://www.learnhowtoprogram.com/lessons/redirecting-to-https-and-issuing-a-security-certificate).
 
 ## Known Bugs
 

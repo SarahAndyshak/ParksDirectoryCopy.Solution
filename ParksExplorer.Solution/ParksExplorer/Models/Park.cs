@@ -26,5 +26,45 @@ namespace ParksExplorer.Models
 
       return parkList;
     }
+
+    public static Park GetDetails(int id)
+    {
+      var apiCallTask = ApiHelper.Get(id);
+      var result = apiCallTask.Result;
+
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+      Park park = JsonConvert.DeserializeObject<Park>(jsonResponse.ToString());
+
+      return park;
+    }
+
+    public static void Post(Park park)
+    {
+      string jsonPark = JsonConvert.SerializeObject(park);
+      ApiHelper.Post(jsonPark);
+    }
+
+    public static void Put(Park park)
+    {
+      string jsonPark = JsonConvert.SerializeObject(park);
+      ApiHelper.Put(park.ParkId, jsonPark);
+    }
+
+    public static void Delete (int id)
+    {
+      ApiHelper.Delete(id);
+    }
+
+// left over from Thursday attempts at pagination
+    // public static List<Park> GetParks(int page)
+    // {
+    //   var apiCallTask = ApiHelper.GetParks(page);
+    //   var result = apiCallTask.Result;
+
+    //   JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
+    //   List<Park> parkList = JsonConvert.DeserializeObject<List<Park>>(jsonResponse.ToString());
+
+    //   return parkList;
+    // }
   }
 }

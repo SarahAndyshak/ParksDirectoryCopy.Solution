@@ -1,0 +1,38 @@
+@{
+  ViewData["Title"] = $"Edit {Model.Name}";
+}
+
+@model ParksExplorer.Models.Park
+
+<h4>Edit @Model.Name</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.ParkId)
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new { @Value = Model.Name})
+  <br>
+  @Html.LabelFor(model => model.Classification)
+  @Html.TextBoxFor(model => model.Classification, new { @Value = Model.Classification})
+  <br>
+  @Html.LabelFor(model => model.Location) 
+  @Html.TextBoxFor(model => model.Location, new { @Value = Model.Location})
+  <br>
+  @Html.LabelFor(model => model.MajorLandmarks)
+  @Html.TextBoxFor(model => model.MajorLandmarks, new { @Value = Model.MajorLandmarks})
+  <br>
+  @Html.LabelFor(model => model.Activities)
+  @Html.TextBoxFor(model => model.Activities, new { @Value = Model.Activities})
+  <br>
+  @Html.LabelFor(model => model.Facilities)
+  @Html.TextBoxFor(model => model.Facilities, new { @Value = Model.Facilities})
+  <br>
+  @Html.LabelFor(model => model.YearFounded)
+  @Html.TextBoxFor(model => model.YearFounded, new { @Value = Model.YearFounded })
+  <br>
+  <br>
+  <input type="submit" value="Edit park" class="btn btn-primary"/>
+}
+
+<br>
+<p>@Html.ActionLink("Back to park details", "Details", new {id = @Model.ParkId})</p>

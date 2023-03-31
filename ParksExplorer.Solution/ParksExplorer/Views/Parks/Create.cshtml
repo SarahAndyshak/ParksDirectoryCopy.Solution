@@ -1,0 +1,40 @@
+@{
+  ViewData["Title"] = "Create An Entry";
+}
+
+@model ParksDirectory.Models.Park
+
+<h4>Add a new park to the website</h4>
+
+<div class="container">
+  @using (Html.BeginForm())
+  {
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+    <br>
+    @Html.LabelFor(model => model.Classification)
+    @Html.TextBoxFor(model => model.Classification)
+    <br>
+    @Html.LabelFor(model => model.Location)
+    @Html.TextBoxFor(model => model.Location)
+    <br>
+    @Html.LabelFor(model => model.MajorLandmarks)
+    @Html.TextBoxFor(model => model.MajorLandmarks)
+    <br>
+    @Html.LabelFor(model => model.Activities)
+    @Html.TextBoxFor(model => model.Activities)
+    <br>
+    @Html.LabelFor(model => model.Facilities)
+    @Html.TextBoxFor(model => model.Facilities)
+    <br>
+    @Html.LabelFor(model => model.YearFounded)
+    @Html.TextBoxFor(model => model.YearFounded)
+    <br>
+    <br>
+    <input type="submit" value="Add new park" class="btn btn-primary"/>
+  }
+  
+  <br>
+  <p>@Html.ActionLink("Back to all parks", "Index")</p>
+  
+</div>

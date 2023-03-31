@@ -1,12 +1,17 @@
 @{
-    ViewData["Title"] = "Parks";
+    ViewData["Title"] = "Parks, Monuments, and Forests";
 }
 
-<h1>All Cretaceous Parks:</h1>
+<h1>National and State Parks, Monuments, and Forests</h1>
 
+<h3>Actions:</h3>
+
+<p>@Html.ActionLink("Add a new park to the website", "Create")</p>
+
+<h3>Parks, Monuments, and Forests:</h3>
 <ol>
 @foreach (Park park in Model)
 {
-  <li><strong>@park.Name</strong> | <a href="/Parks/Details/@(park.ParkId)">View Details</a></li>
+  <li><strong>@park.Name</strong> | <a href="/parks/Details/@(park.ParkId)">View Details</a></li>
 }
 </ol>

@@ -1,0 +1,15 @@
+@{
+  ViewData["Title"] = "Parks, Monuments, and Forests";
+}
+
+<h1>All About @Model.Name</h1>
+<p>Classificiation: @Model.Classification</p>
+<p>Location: @Model.Location</p>
+<p>Major Landmarks: @Model.MajorLandmarks</p>
+<p>Activities: @Model.Activities</p>
+<p>Facilities: @Model.Facilities</p>
+<p>Year Founded: @Model.YearFounded</p>
+
+<p>@Html.ActionLink("Edit entry details", "Edit", new { id = @Model.ParkId })</p>
+<p>@Html.ActionLink("Delete entry", "Delete", new { id = @Model.ParkId })</p>
+<p>@Html.ActionLink("Return to all park entries", "Index")</p>

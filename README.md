@@ -158,7 +158,7 @@ Notice that the value of `parkId` needs to match the id number in the URL. In th
 * As of 31 March 2023, the search feature only works with complete names, locations, etc.
 
 ## License
-Enjoy the site! If you have questions or suggestions for fixing the code, please contact us!
+Enjoy the site! If you have questions or suggestions for fixing the code, please contact me!
 
 [MIT](https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)
 

@@ -122,5 +122,30 @@ namespace ParksDirectory.Controllers
 
       return NoContent();
     }
+
+    // GET api/parks/page/2
+    [HttpGet("page/{page}")]
+    public async Task<ActionResult<List<Park>>> GetParks(int page)
+    {
+      if (_db.Parks == null)
+        return NotFound();
+
+      var pageResults = 2f;
+      var pageCount = Math.Ceiling(_db.Parks.Count() / pageResults);
+
+      var parks = await _db.Parks
+                      .Skip((page - 1) * (int)pageResults)
+                      .Take((int)pageResults)
+                      .ToListAsync();
+      
+      var response = new ParkResponse
+      {
+        Parks = parks,
+        CurrentPage = page,
+        Pages = (int)pageCount,
+      };
+
+      return Ok(response);
+    }
   }
 }

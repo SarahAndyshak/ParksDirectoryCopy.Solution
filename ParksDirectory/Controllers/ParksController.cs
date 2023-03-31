@@ -57,7 +57,7 @@ namespace ParksDirectory.Controllers
         query = query.Where(entry => entry.YearFounded == yearFounded);
       }
 
-      // add search parameters for finding parks founded before/after certain year
+      // add search parameters for finding parks founded before/after certain year 
       if(foundedAfter > 0)
       {
         query = query.Where(entry => entry.YearFounded >= foundedAfter);

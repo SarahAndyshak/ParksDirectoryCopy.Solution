@@ -13,13 +13,18 @@
 * HTML
 * CSS
 
-## Description
+## 🌲 Description
 
 A website to help you explore the US national parks system. 
 
-## How To Run This Project
+Screenshots from this site:
+![splash page](parksplash.png)
+![parks listing page](parklisting.png)
+![park detail page](parkdetails.png)
 
-## What Is This?
+## 🌲 How To Run This Project
+
+### What Is This?
 
 This project (the Parks Explorer) is based on the following classwork on LearnHowToProgram.com:
 
@@ -28,8 +33,6 @@ This project (the Parks Explorer) is based on the following classwork on LearnHo
 - https://www.learnhowtoprogram.com/c-and-net/building-an-api/mvc-client-post-put-and-delete
 
 Finally, this project was scaffolded using [`dotnet new`](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new).
-
-## How To Run This Project
 
 ### Install Tools
 
@@ -48,7 +51,7 @@ First, following the instructions in the README of [this repo](https://github.co
 
 ## Known Bugs
 
-* As of 31 March 2023, updates (save, edit, delete actions) lag and the page needs to be refreshed for changes to be applied. This also seems to cause a problem for error handling. The Required statement in Park.cs and Create.cshtml doesn't seem to have a chance to be applied.
+* As of 31 March 2023, updates (save, edit, delete actions) lag and the page needs to be refreshed for changes to be applied (when using a Mac).
 
 ## License
 Enjoy the site! If you have questions or suggestions for fixing the code, please contact me!

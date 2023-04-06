@@ -12,6 +12,9 @@ html {
   position: relative;
   min-height: 100%;
 }
+a {
+  color: #225173;
+}
 
 body {
   margin-bottom: 60px;

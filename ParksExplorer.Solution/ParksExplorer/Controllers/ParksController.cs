@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using ParksExplorer.Models;
+using Newtonsoft.Json.Linq;
+
 
 namespace ParksExplorer.Controllers;
 
@@ -62,11 +64,20 @@ public class ParksController : Controller
     return RedirectToAction("Index");
   }
 
+// original search function
+  // [HttpPost, ActionName("Search")]
+  // public IActionResult Search(string name)
+  // {
+  //   List<Park> parks = Park.GetParks();
+  //   List<Park> result = parks.FindAll(planet => planet.Name.ToLower().Equals(name.ToLower()));
+  //   return View(result);
+  // }
+
   [HttpPost, ActionName("Search")]
   public IActionResult Search(string name)
   {
     List<Park> parks = Park.GetParks();
-    List<Park> result = parks.FindAll(planet => planet.Name.ToLower().Equals(name.ToLower()));
+    List<Park> result = parks.FindAll(park => park.Name.ToLower().Contains(name.ToLower()));
     return View(result);
   }
 }

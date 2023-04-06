@@ -33,3 +33,10 @@ div#navlinks {
   opacity: 0.5;
   z-index: -1;
   }
+
+  .btn-primary {
+    color: #fff;
+    background-color: #416144;
+    border-color: #72A276;
+    margin: 5px;
+  }

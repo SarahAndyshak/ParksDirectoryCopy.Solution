@@ -13,28 +13,38 @@
 <div class="container">
   @using (Html.BeginForm())
   {
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
+    <div class="form-group">
+      @Html.LabelFor(model => model.Name, new { @class = "control-label" })
+      @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
     <br>
-    @Html.LabelFor(model => model.Classification)
-    @Html.TextBoxFor(model => model.Classification)
+
+      @Html.LabelFor(model => model.Classification, new { @class = "control-label" })
+      @Html.TextBoxFor(model => model.Classification, new { @class = "form-control" })
+
     <br>
-    @Html.LabelFor(model => model.Location)
-    @Html.TextBoxFor(model => model.Location)
+
+      @Html.LabelFor(model => model.Location, new { @class = "control-label" })
+      @Html.TextBoxFor(model => model.Location, new { @class = "form-control" })
     <br>
-    @Html.LabelFor(model => model.MajorLandmarks)
-    @Html.TextBoxFor(model => model.MajorLandmarks)
+
+      @Html.LabelFor(model => model.MajorLandmarks, new { @class = "control-label" })
+      @Html.TextBoxFor(model => model.MajorLandmarks, new { @class = "form-control" })
     <br>
-    @Html.LabelFor(model => model.Activities)
-    @Html.TextBoxFor(model => model.Activities)
+
+      @Html.LabelFor(model => model.Activities, new { @class = "control-label" })
+      @Html.TextBoxFor(model => model.Activities, new { @class = "form-control" })
     <br>
-    @Html.LabelFor(model => model.Facilities)
-    @Html.TextBoxFor(model => model.Facilities)
+
+      @Html.LabelFor(model => model.Facilities, new { @class = "control-label" })
+      @Html.TextBoxFor(model => model.Facilities, new { @class = "form-control" })
     <br>
-    @Html.LabelFor(model => model.YearFounded)
-    @Html.TextBoxFor(model => model.YearFounded)
+
+      @Html.LabelFor(model => model.YearFounded, new { @class = "control-label" })
+      @Html.TextBoxFor(model => model.YearFounded, new { @class = "form-control" })
+    </div>
     <br>
     <br>
+    
     <input type="submit" value="Add new park" class="btn btn-primary"/>
   }
   

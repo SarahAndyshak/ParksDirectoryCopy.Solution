@@ -25,8 +25,15 @@ public class ParksController : Controller
   [HttpPost]
   public ActionResult Create(Park park)
   {
+    if (!ModelState.IsValid)
+    {
+      return View(park);
+    }
+    else
+    {
     Park.Post(park);
     return RedirectToAction("Index");
+    }
   }
 
   public ActionResult Edit(int id)

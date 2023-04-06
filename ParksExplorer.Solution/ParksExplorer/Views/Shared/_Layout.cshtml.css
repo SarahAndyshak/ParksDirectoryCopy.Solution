@@ -8,7 +8,7 @@ a.navbar-brand {
 }
 
 a {
-  color: #105484;
+  color: #154160;
 }
 
 .btn-primary {
@@ -40,9 +40,11 @@ button.accept-policy {
 }
 
 .footer {
+  color: rgb(10, 68, 10);
   position: absolute;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
   line-height: 60px;
+  background-color: rgb(161, 177, 161, .5);
 }

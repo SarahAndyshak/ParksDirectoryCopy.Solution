@@ -10,6 +10,7 @@
 * .NET
 * ASP.Net
 * Entity Framework
+* MySQL
 
 ## Description
 

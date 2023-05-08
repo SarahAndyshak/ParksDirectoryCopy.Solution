@@ -33,7 +33,7 @@ dotnet tool install --global dotnet-ef --version 6.0.0
 1. Clone this repo.
 2. Open the terminal and navigate to this project's production directory called "ParksDirectory".
 3. Within the production directory "ParksDirectory", create two new files: `appsettings.json` and `appsettings.Development.json`.
-4. Within `appsettings.json`, put in the following code. Make sure to replacing the `uid` ("YOUR-USER-NAME-HERE")and `pwd` ("YOUR-PASSWORD-HERE") values in the MySQL database connection string with your own username and password for MySQL.
+4. Within `appsettings.json`, put in the following code. Make sure to replace the `database` (YOUR-DATABASE-NAME-HERE), `uid` ("YOUR-USER-NAME-HERE"), and `pwd` ("YOUR-PASSWORD-HERE") values in the MySQL database connection string with your own datbase name, username, and password for MySQL.
 
 ```json
 {
@@ -45,7 +45,7 @@ dotnet tool install --global dotnet-ef --version 6.0.0
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=planetary_dictionary;uid=YOUR-USER-NAME-HERE;pwd=YOUR-PASSWORD-HERE;"
+    "DefaultConnection": "Server=localhost;Port=3306;database=YOUR-DATABASE-NAME-HERE;uid=YOUR-USER-NAME-HERE;pwd=YOUR-PASSWORD-HERE;"
   }
 }
 ```
@@ -67,9 +67,25 @@ dotnet tool install --global dotnet-ef --version 6.0.0
 
 6. Create the database using the migrations in the Parks Directory API project. Open your shell (e.g., Terminal or GitBash) to the production directory "ParksDirectory", and run `dotnet ef database update`. You may need to run this command for each of the branches in this repo if multiple branches have been created. 
     - To optionally create a migration, run the command `dotnet ef migrations add MigrationName` where `MigrationName` is your custom name for the migration in UpperCamelCase. To learn more about migrations, visit the LHTP lesson [Code First Development and Migrations](https://www.learnhowtoprogram.com/c-and-net-part-time/many-to-many-relationships/code-first-development-and-migrations).
-7. Within the production directory "ParksDirectory", run `dotnet watch run --launch-profile "ParksDirectory-Production"` in the command line to start the project in production mode with a watcher. 
-8. To optionally further build out this project in development mode, start the project with `dotnet watch run` in the production directory "ParksDirectory".
-9. Use your program of choice to make API calls. In your API calls, use the domain _http://localhost:5000_. Keep reading to learn about all of the available endpoints.
+7. Enable CORS by running `dotnet add package Microsoft.AspNet.WebApi.Cors --version 5.2.9` and adding the following code to Program.cs
+
+```json
+var devCorsPolicy = "devCorsPolicy";
+builder.Services.AddCors(options => options.AddPolicy(devCorsPolicy, builder =>
+  {
+    builder
+      .AllowAnyOrigin()
+      .AllowAnyMethod()
+      .AllowAnyHeader();
+  }));
+  ...
+  app.UseCors(devCorsPolicy);
+  ```
+
+8. Within the production directory "ParksDirectory", run `dotnet watch run --launch-profile "ParksDirectory-Production"` in the command line to start the project in production mode with a watcher. 
+9. To optionally further build out this project in development mode, start the project with `dotnet watch run` in the production directory "ParksDirectory".
+10. Use your program of choice to make API calls. In your API calls, use the domain _http://localhost:5000_. Keep reading to learn about all of the available endpoints.
+11. To access the site in swagger, run `dotnet run` in the terminal, and access `http://localhost:5000/swagger/index.html` in the browser.
 
 ## Testing the API Endpoints
 

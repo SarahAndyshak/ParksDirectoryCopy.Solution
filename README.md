@@ -33,7 +33,7 @@ dotnet tool install --global dotnet-ef --version 6.0.0
 1. Clone this repo.
 2. Open the terminal and navigate to this project's production directory called "ParksDirectory".
 3. Within the production directory "ParksDirectory", create two new files: `appsettings.json` and `appsettings.Development.json`.
-4. Within `appsettings.json`, put in the following code. Make sure to replace the `database` (YOUR-DATABASE-NAME-HERE), `uid` ("YOUR-USER-NAME-HERE"), and `pwd` ("YOUR-PASSWORD-HERE") values in the MySQL database connection string with your own datbase name, username, and password for MySQL.
+4. Within `appsettings.json`, put in the following code. Make sure to replace the `database` (YOUR-DATABASE-NAME-HERE), `uid` ("YOUR-USER-NAME-HERE"), and `pwd` ("YOUR-PASSWORD-HERE") values in the MySQL database connection string with your own database name, username, and password for MySQL.
 
 ```json
 {
@@ -69,7 +69,7 @@ dotnet tool install --global dotnet-ef --version 6.0.0
     - To optionally create a migration, run the command `dotnet ef migrations add MigrationName` where `MigrationName` is your custom name for the migration in UpperCamelCase. To learn more about migrations, visit the LHTP lesson [Code First Development and Migrations](https://www.learnhowtoprogram.com/c-and-net-part-time/many-to-many-relationships/code-first-development-and-migrations).
 7. Enable CORS by running `dotnet add package Microsoft.AspNet.WebApi.Cors --version 5.2.9` and adding the following code to Program.cs
 
-```json
+```
 var devCorsPolicy = "devCorsPolicy";
 builder.Services.AddCors(options => options.AddPolicy(devCorsPolicy, builder =>
   {

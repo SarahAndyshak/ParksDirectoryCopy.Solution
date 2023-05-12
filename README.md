@@ -102,7 +102,7 @@ PUT http://localhost:5000/api/parks/{id}
 DELETE http://localhost:5000/api/parks/{id}
 ```
 
-Note: `{id}` is a variable and it should be replaced with the id number of the planet you want to GET, PUT, or DELETE. For GET .../page/{page}, {page} indicates the page number you wish to view. 
+Note: `{id}` is a variable and it should be replaced with the id number of the park you want to GET, PUT, or DELETE. For GET .../page/{page}, {page} indicates the page number you wish to view. 
 
 #### Optional Query String Parameters for GET Request
 
